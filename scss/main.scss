@@ -112,6 +112,77 @@ main {
   }
 }
 
+// Work/Projects
+
+.projects {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border-bottom: $secondary-color 5px solid;
+
+    &:hover {
+      opacity: 0.5;
+      @include easeOut;
+    }
+  }
+}
+
+// Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 5px black solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+// Button Styles
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: white;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 25);
+  color: white;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
